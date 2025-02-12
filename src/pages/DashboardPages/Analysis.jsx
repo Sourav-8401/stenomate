@@ -79,7 +79,7 @@ export default function Analysis({ correctTyped, toggleAnalyze, setToggleAnalyze
       <div className="mt-4 flex flex-wrap justify-between text-white border-2 border-black py-4 px-2">
         <div className="text-black flex flex-col  p-2 rounded w-1/2">
           Yours Words
-          <div className="ps-1 mt-2 text-white  ">
+          <div className="ps-1 mt-2 text-black  ">
             {analysis.map((item, index) => (
               <span
                 key={index}
@@ -93,7 +93,7 @@ export default function Analysis({ correctTyped, toggleAnalyze, setToggleAnalyze
         </div>
         <div className="text-black flex flex-col  p-2 rounded w-1/2  ">
           Orignal Words{" "}
-          <div className="bg-green-300 mt-2 flex ps-1">{correctTyped}</div>
+          <div className="bg-green-300 mt-2 text-justify flex ps-1">{correctTyped}</div>
         </div>
       </div>
       </div>}
