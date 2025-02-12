@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-export default function TakeTest() {
+export default function TakeTest({audioData}) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -64,11 +64,12 @@ export default function TakeTest() {
       {/* Audio element to load the file */}
       <audio
         ref={audioRef}
-        src="/audio.mp3"
+        src={audioData}
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
       />
       {/* Play/Pause Button */}
+      <h2 className="text-red-600 font-medium text-lg mt-3">Exercise {audioData.substring(2,3)}</h2>
       <button
         className="btn text-white bg-blue-500 py-2 w-full  rounded-xl my-4"
         onClick={handlePlayPause}
@@ -105,12 +106,17 @@ export default function TakeTest() {
         className="border-2 rounded-lg"
         onChange={handleSpeedChange}
       >
+        
+        <option value="45">45 WPM</option>
+        <option value="50">50 WPM</option>
+        <option value="55">55 WPM</option>
+        <option value="60">60 WPM</option>
         <option value="75">75 WPM</option>
         <option value="80">80 WPM</option>
         <option value="85">85 WPM</option>
         <option value="90">90 WPM</option>
         <option value="95">95 WPM</option>
-        <option value="100">100 WPM</option>
+        <option value="100" selected>100 WPM</option>
         <option value="105">105 WPM</option>
         <option value="110">110 WPM</option>
         <option value="115">115 WPM</option>
@@ -119,10 +125,6 @@ export default function TakeTest() {
         <option value="130">130 WPM</option>
         <option value="135">135 WPM</option>
         <option value="140">140 WPM</option>
-        <option value="145">145 WPM</option>
-        <option value="150">150 WPM</option>
-        <option value="155">155 WPM</option>
-        <option value="160">160 WPM</option>
       </select>
       <h2>Fluctuation Level:</h2>
       <select
