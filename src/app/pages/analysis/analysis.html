@@ -1,1 +1,95 @@
-<p>analysis works!</p>
+<div class="py-4">
+    <app-search-bar></app-search-bar>
+
+    <div class="px-4 mt-10">
+<div id="transcription-section" class="grid grid-cols-1 lg:grid-cols-3 gap-6 section-clickable">
+                <div id="dictation-input-area" class="section-clickable col-span-2">
+                    <label for="dictation-textarea" class="block text-lg font-semibold text-gray-800 mb-3" contenteditable="false">Write Your Dictation</label>
+                    <textarea id="dictation-textarea" class="w-full h-[70vh] p-4 border border- rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable" placeholder="Start typing your dictation here..."></textarea>
+                </div>
+
+                <div id="assessment-controls" class="section-clickable">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4" contenteditable="false">Assessment Settings</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <label for="grammar-check" class="block text-sm text-gray-600 mb-2" contenteditable="false">Grammar Assessment</label>
+                            <div class="relative">
+                                <select id="grammar-check" class="appearance-none w-full bg-white border border- rounded px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable">
+                                    <option value="basic">Basic</option>
+                                    <option value="intermediate" selected="">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <label for="spelling-check" class="block text-sm text-gray-600 mb-2" contenteditable="false">Spelling Accuracy</label>
+                            <div class="relative">
+                                <select id="spelling-check" class="appearance-none w-full bg-white border border- rounded px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable">
+                                    <option value="lenient">Lenient</option>
+                                    <option value="moderate" selected="">Moderate</option>
+                                    <option value="strict">Strict</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <label for="punctuation-check" class="block text-sm text-gray-600 mb-2" contenteditable="false">Punctuation Assessment</label>
+                            <div class="relative">
+                                <select id="punctuation-check" class="appearance-none w-full bg-white border border- rounded px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable">
+                                    <option value="basic">Basic</option>
+                                    <option value="standard" selected="">Standard</option>
+                                    <option value="comprehensive">Comprehensive</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <label for="formatting-check" class="block text-sm text-gray-600 mb-2" contenteditable="false">Formatting Style</label>
+                            <div class="relative">
+                                <select id="formatting-check" class="appearance-none w-full bg-white border border- rounded px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable">
+                                    <option value="casual">Casual</option>
+                                    <option value="formal" selected="">Formal</option>
+                                    <option value="academic">Academic</option>
+                                    <option value="business">Business</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <label for="difficulty-level" class="block text-sm text-gray-600 mb-2" contenteditable="false">Assessment Difficulty</label>
+                            <div class="relative">
+                                <select id="difficulty-level" class="appearance-none w-full bg-white border border- rounded px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate" selected="">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="submit-button" class="w-full mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-medium section-clickable" contenteditable="false">
+                        Submit for Assessment
+                    </button>
+                </div>
+            </div>
+    </div>
+</div>

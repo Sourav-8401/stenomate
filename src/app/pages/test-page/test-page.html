@@ -1,1 +1,110 @@
-<p>test-page works!</p>
+<div class="py-4 pr-4 ">
+    <app-search-bar></app-search-bar>
+    <div class="mt-10 px-4">
+        <span class="text-xl font-semibold mx-2">Select Options</span>
+        <div id="dictation-card" class="bg-white mt-6 rounded-lg shadow-md w-[80vw] p-5 cursor-default-must ">
+            <div id="card-header" class="mb-6 section-clickable">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">English Literature</h1>
+                        <h2 class="text-md text-gray-600">Shakespeare's Sonnets</h2>
+                    </div>
+                    <div class="mt-2 md:mt-0 bg-gray-100 px-3 py-1 rounded-full">
+                        <span class="text-sm text-gray-700">Total words: <span class="font-medium">250</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dictation-controls" class="mb-6 section-clickable">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="relative">
+                        <label for="dictation-speed" class="block text-sm text-gray-600 mb-2">Dictation Speed</label>
+                        <div class="relative">
+                            <select id="dictation-speed"
+                                class="appearance-none w-full bg-white border border-accent rounded px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable">
+                                <option value="80">80 WPM</option>
+                                <option value="90">90 WPM</option>
+                                <option value="100">100 WPM</option>
+                                <option value="110">110 WPM</option>
+                                <option value="120">120 WPM</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <i class="text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-chevron-down"
+                                        aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                        data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                        </path>
+                                    </svg></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <label for="fluctuation-speed" class="block text-sm text-gray-600 mb-2">Fluctuation
+                            Speed</label>
+                        <div class="relative">
+                            <select id="fluctuation-speed"
+                                class="appearance-none w-full bg-white border border-accent rounded px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent section-clickable">
+                                <option value="low">Low</option>
+                                <option value="medium" selected="">Medium</option>
+                                <option value="high">High</option>
+                                <option value="very-high">Very High</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <i class="text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-chevron-down"
+                                        aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                        data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                        </path>
+                                    </svg></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="audio-player" class="mb-8 section-clickable">
+                <div class="flex items-center mb-4">
+                    <span id="current-time" class="text-sm text-gray-600 w-12 section-clickable">00:00</span>
+                    <div class="relative flex-grow mx-2">
+                        <div class="w-full h-2 bg-accent rounded-full">
+                            <div id="progress-bar" class="h-2 bg-primary rounded-full section-clickable"
+                                style="width: 30%;">
+                                <div class="absolute -right-1 -top-1 w-4 h-4 bg-primary rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="total-time" class="text-sm text-gray-600 w-12 section-clickable">03:45</span>
+                </div>
+
+                <div class="flex justify-center space-x-4">
+                    <button id="play-button"
+                        class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 section-clickable">
+                        <span class="material-symbols-rounded">
+                            arrow_right
+                        </span>
+                    </button>
+                    <button id="reset-button"
+                        class="flex items-center justify-center w-12 h-12 bg-white text-gray-700 border border-accent rounded-full hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 section-clickable">
+                        <span class="material-symbols-rounded">
+                            replay
+                        </span></button>
+                    <button id="transcribe-button"
+                        class="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-medium section-clickable">
+                        Transcribe Now
+                    </button>
+                </div>
+            </div>
+
+            <div id="dictation-text-area" class="border border-accent rounded-lg p-4 bg-gray-50 h-40 section-clickable">
+                <p class="text-gray-400 text-center mt-14">Press play to start dictation</p>
+            </div>
+        </div>
+    </div>
+</div>

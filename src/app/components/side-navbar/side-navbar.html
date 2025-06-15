@@ -1,0 +1,49 @@
+<div class="drawer min-h-full lg:drawer-open">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content min-h-full flex flex-col">
+    <!-- Page content here -->
+    <router-outlet />
+  </div>
+  <div class="drawer-side">
+    <!-- Sidebar content here -->
+    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="flex flex-col min-h-full">
+      <div class="text-xl text-center flex w-full justify-between px-4 py-4 items-center font-bold text-gray-600">
+        <label for="my-drawer-2" class="drawer-button flex items-center bg-gray-200 rounded-md p-1">
+          <span class="material-symbols-outlined text-xs"> menu </span>
+        </label>
+        <span> StenoMate </span>
+      </div>
+      <div class="flex flex-col flex-1 justify-between mt-12">
+        <ul class="menu flex gap-y-2 text-gray-600 w-50 p-4">
+          <li>
+            <a class="px-4 rounded-lg py-3" routerLink="/home" routerLinkActive="bg-[#6b57f2] text-white">
+              <span class="material-symbols-outlined text-[#6b57f2]"> space_dashboard </span>
+              Home</a>
+          </li>
+          <li>
+            <a class="px-4 rounded-lg py-3" routerLink="/test" routerLinkActive="bg-[#6b57f2] text-white">
+              <span class="material-symbols-outlined text-[#6b57f2]"> assignment </span>Test</a>
+          </li>
+          <li>
+            <a class="px-4 rounded-lg py-3" routerLink="/analysis" routerLinkActive="bg-[#6b57f2] text-white">
+              <span class="material-symbols-outlined text-[#6b57f2]"> frame_inspect </span>Analysis</a>
+          </li>
+        </ul>
+        <div class="text-gray-600 flex flex-col gap-6 px-4 mb-10">
+          <p class="text-md">Settings</p>
+          <div class="flex flex-col gap-6 items-start">
+            <button class="text-gray-700 flex gap-2">
+              <span class="material-symbols-outlined text-gray-400">Settings</span>
+              Settings
+            </button>
+            <button class="text-red-700 flex gap-2">
+              <span class="material-symbols-outlined text-gray-400">
+                logout </span>Log Out
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
